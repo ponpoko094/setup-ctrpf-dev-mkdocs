@@ -1,0 +1,34 @@
+site_name: setup-ctrpf-dev
+
+theme:
+    name: material
+    font:
+        text: "Noto Sans JP"
+        code: "Consolas"
+    language: ja
+
+extra_css:
+    - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
+    - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
+    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+
+extra_javascript:
+    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - admonition
+    - footnotes
+    - def_list
+    - mdx_math:
+        enable_dollar_delimiter: true
+    - fontawesome_markdown
+    - pymdownx.keys
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.highlight:
+        use_pygments: true
+        noclasses: true
+        pygments_style: monokai
+        linenums: true
+    - pymdownx.superfences
