@@ -79,7 +79,7 @@ plugins:
     # GithubのCommit時間をページに表示
     - git-revision-date-localized:
           type: iso_datetime
-          timezone: Japan
+          timezone: Asia/Tokyo
           fallback_to_build_date: false
           enable_creation_date: true
           enabled: true
