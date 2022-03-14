@@ -74,7 +74,7 @@ markdown_extensions:
     - pymdownx.snippets
     - pymdownx.superfences
 
-# # 拡張を入れる。
+# 拡張を入れる。
 plugins:
     # GithubのCommit時間をページに表示
     - git-revision-date-localized:
