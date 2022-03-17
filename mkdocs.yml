@@ -91,4 +91,4 @@ plugins:
       # .pagesでページ階層を指定できるようにする
   - awesome-pages
 
-nav:
+# nav:
