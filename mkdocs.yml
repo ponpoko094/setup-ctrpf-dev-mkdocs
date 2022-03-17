@@ -12,83 +12,94 @@ copyright: "Copyright © 2022 - ponpoko094"
 
 # テーマ
 theme:
-    name: material
-    font:
-        text: "Noto Sans JP"
-        code: "Consolas"
-    language: ja
-    features:
-        # - navigation.tabs
-    palette:
-        - scheme: default
-          primary: blue
-          accent: blue
-          toggle:
-              icon: material/toggle-switch
-              name: Switch to dark mode
-        - scheme: slate
-          primary: indigo
-          accent: indigo
-          toggle:
-              icon: material/toggle-switch-off-outline
-              name: Switch to light mode
-    icon:
-        logo: fontawesome/solid/book
+  name: material
+  font:
+    text: "Noto Sans JP"
+    code: "Consolas"
+  language: ja
+  features:
+    # - navigation.tabs
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  icon:
+    logo: fontawesome/solid/book
 
 # cssファイルの読み込み
 extra_css:
-    - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
-    - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
-    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+  - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
+  - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
+  - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+  - "https://unpkg.com/mermaid@8.0.0/dist/mermaid.css"
 
 # JavaScriptファイルの読み込み
 extra_javascript:
-    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js
 
 extra:
-    social:
-        - icon: fontawesome/brands/github
-          link: https://github.com/ponpoko094
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ponpoko094
 
 # 拡張機能の設定
 markdown_extensions:
-    - abbr
-    - admonition
-    - footnotes
-    - def_list
-    - mdx_math:
-          enable_dollar_delimiter: true
-    - fontawesome_markdown
-    - mdx_truly_sane_lists
-    - pymdownx.keys
-    - pymdownx.emoji:
-          emoji_index: !!python/name:materialx.emoji.twemoji
-          emoji_generator: !!python/name:materialx.emoji.to_svg
-    - pymdownx.highlight:
-          use_pygments: true
-          noclasses: true
-          pygments_style: monokai
-          linenums: true
-    - pymdownx.tasklist:
-          custom_checkbox: true
-    - pymdownx.snippets
-    - pymdownx.superfences
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - def_list
+  - mdx_math:
+      enable_dollar_delimiter: true
+  - fontawesome_markdown
+  - mdx_truly_sane_lists
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      use_pygments: true
+      noclasses: true
+      pygments_style: monokai
+      linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 # 拡張を入れる。
 plugins:
-    # GithubのCommit時間をページに表示
-    - git-revision-date-localized:
-          type: iso_datetime
-          timezone: Asia/Tokyo
-          fallback_to_build_date: false
-          enable_creation_date: true
-          enabled: true
-    # 日本語対応
-    - search:
-          lang:
-              - en
-              - ja
-        # .pagesでページ階層を指定できるようにする
-    - awesome-pages
-
-nav:
+  # GithubのCommit時間をページに表示
+  - git-revision-date-localized:
+      type: iso_datetime
+      timezone: Asia/Tokyo
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
+  # 日本語対応
+  - search:
+      lang:
+        - en
+        - ja
+      # .pagesでページ階層を指定できるようにする
+  - awesome-pages
+# nav:
+#     - ホーム: index.md
