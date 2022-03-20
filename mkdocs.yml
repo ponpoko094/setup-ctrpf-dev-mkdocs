@@ -25,13 +25,13 @@ theme:
       accent: blue
       toggle:
         icon: material/toggle-switch
-        name: Switch to dark mode
+        name: ダークテーマに変更
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to light mode
+        name: ライトテーマに変更
   icon:
     logo: fontawesome/solid/book
 
@@ -90,5 +90,3 @@ plugins:
         - ja
       # .pagesでページ階層を指定できるようにする
   - awesome-pages
-
-# nav:
